@@ -13,6 +13,25 @@
             Console.WriteLine("--------------------------------------------------------------------------------------\n");
         }
 
+        public void AfficherLabyrinth(Labyrinthe lab1)
+        {
+            for (int i = 0; i < lab1.Map.GetLength(0); i++)
+            {
+                Console.Write("\n");
+                for (int j = 0; j < lab1.Map.GetLength(1); j++)
+                {
+                    if (j == lab1.PosX && i == lab1.PosY)
+                    {
+                        Console.Write('O');
+                    }
+                    else
+                    {
+                        Console.Write(lab1.Map[j, i]);
+                    }
+                }
+            }
+        }
+
         public void AfficherVictoire()
         {
             Console.Clear();
